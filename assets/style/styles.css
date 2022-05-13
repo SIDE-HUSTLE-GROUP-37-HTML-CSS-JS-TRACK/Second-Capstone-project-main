@@ -36,10 +36,7 @@ li {
 .nav-bar-links a {
   color: #1fab89;
 }
-/* NAV-BAR-LOGO */
-.nav-bar-logo {
-  /* font-size: 32px; */
-}
+
 /* navbar-section NAV-MENU */
 .nav-menu {
   display: flex;
@@ -53,6 +50,16 @@ li {
 }
 .nav-menu li {
   padding: 5px 14px;
+}
+.container-box{
+  padding: 7% 10% ;
+}
+.light-green-section {
+  background-color: #d7fbe8;
+  color: #124028;
+}
+.card-title{
+  text-align: center;
 }
 
 /*RESPONSIVE navbar-section NAV-MENU STARTS*/
@@ -76,6 +83,7 @@ input[type="checkbox"] {
     left: 0;
     text-align: center;
     padding: 16px 0;
+    z-index: 1;
   }
   .nav-menu li:hover {
     display: inline-block;
