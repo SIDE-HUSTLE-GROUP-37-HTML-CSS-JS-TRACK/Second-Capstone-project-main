@@ -76,6 +76,9 @@ li {
   font-size: 24px;
   user-select: none;
 }
+#nav-id.visible{
+  display: block;
+}
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
   .nav-menu {
@@ -96,9 +99,7 @@ li {
   .nav-menu li + li {
     margin-top: 12px;
   }
-  input[type="checkbox"]:checked ~ .nav-menu {
-    display: block;
-  }
+  
   .hamburger {
     display: block;
   }

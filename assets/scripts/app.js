@@ -1,3 +1,7 @@
+// hamburger btn
+const navbarcheckbox = document.getElementById("nav-id");
+const humburgerBtn = document.getElementById("humburger");
+// password section
 const passwordInputBox = document.getElementById("inputPassword4");
 const eyeIcon1 = document.getElementById('eye1');
 const passwordInputBox2 = document.getElementById("inputPassword5");
@@ -22,4 +26,11 @@ function passwordDisplay(params) {
         eyeIcon2.classList.add("fa-eye-slash");
     }
 }
+
+
+function hamburger(params) {
+  // toggle display
+  navbarcheckbox.classList.toggle("visible");
+}
+humburgerBtn.addEventListener('click', hamburger);
 securityEyes.addEventListener("click", passwordDisplay);
