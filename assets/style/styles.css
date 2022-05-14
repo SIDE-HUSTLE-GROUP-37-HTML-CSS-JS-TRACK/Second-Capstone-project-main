@@ -67,7 +67,7 @@ li {
 
 /*RESPONSIVE navbar-section NAV-MENU STARTS*/
 /* CHECKBOX HACK */
-input[type="checkbox"] {
+.nav-bar-links input[type="checkbox"] {
   display: none;
 }
 /*HAMBURGER NAV-MENU*/
