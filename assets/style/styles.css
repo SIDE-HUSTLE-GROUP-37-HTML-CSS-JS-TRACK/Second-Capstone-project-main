@@ -16,8 +16,8 @@ body {
   text-decoration: none;
 }
 
-.nav-bar-item:hover{
- color: #124028;
+.nav-bar-item:hover {
+  color: #124028;
 }
 
 li {
@@ -51,14 +51,14 @@ li {
 .nav-menu li {
   padding: 5px 14px;
 }
-.container-box{
-  padding: 7% 10% ;
+.container-box {
+  padding: 7% 10%;
 }
 .light-green-section {
   background-color: #d7fbe8;
   color: #124028;
 }
-.card-title{
+.card-title {
   text-align: center;
   font-size: 2rem;
   font-family: "Raleway", sans-serif;
@@ -76,8 +76,44 @@ li {
   font-size: 24px;
   user-select: none;
 }
-#nav-id.visible{
+#nav-id.visible {
   display: block;
+}
+
+#eye1,#eye2{
+  color: green;
+}
+#warning1.fa-circle-exclamation,
+#warning2.fa-circle-exclamation,
+#warning3.fa-circle-exclamation,
+#warning4.fa-circle-exclamation,
+#warning5.fa-circle-exclamation,
+#warning6.fa-circle-exclamation {
+  display: var(--fa-display, inline-block);
+  color: red;
+}
+
+#warning1.fa-circle-check,
+#warning2.fa-circle-check,
+#warning3.fa-circle-check,
+#warning4.fa-circle-check,
+#warning5.fa-circle-check,
+#warning6.fa-circle-check {
+  display: var(--fa-display, inline-block);
+  color: green;
+}
+
+#id {
+  background-color: blueviolet;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 /* APPLYING MEDIA QUERIES */
 @media (max-width: 768px) {
@@ -93,13 +129,13 @@ li {
   }
   .nav-menu li:hover {
     display: inline-block;
-    background-color:  #1f7862;
+    background-color: #1f7862;
     transition: 0.3s ease;
   }
   .nav-menu li + li {
     margin-top: 12px;
   }
-  
+
   .hamburger {
     display: block;
   }
