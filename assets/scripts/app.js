@@ -8,7 +8,7 @@ const passwordInputBox = document.getElementById("inputPassword4");
 const eyeIcon1 = document.getElementById("eye1");
 const passwordInputBox2 = document.getElementById("inputPassword5");
 const eyeIcon2 = document.getElementById("eye2");
-const securityEyes = document.getElementById("flexCheckDefault");
+// const securityEyes = document.getElementById("flexCheckDefault");
 // form vailditor
 const userName = document.getElementById("inputUsername4");
 const email = document.getElementById("inputEmail4");
@@ -56,28 +56,17 @@ function hamburger(params) {
   navbarcheckbox.classList.toggle("visible");
 }
 humburgerBtn.addEventListener("click", hamburger);
-securityEyes.addEventListener("click", passwordDisplay);
+eyeIcon1.addEventListener('click', passwordDisplay);
+eyeIcon2.addEventListener('click', passwordDisplay);
+// securityEyes.addEventListener("click", passwordDisplay);
 submitBtn.addEventListener("click", onSubmit);
 
 function onSubmit() {
-  usernameCheck();
-  addressCheck();
-  passwordCheck();
-  phoneNumberCheck();
-  const formInputState = "";
-  warningVisible(formInputState);
-}
-
-function warningVisible(formstate) {
-  if (formstate === "success") {
-    alert("thank you for your time");
-  } else {
-    // warning2.classList.add("fa-circle-exclamation");
-    // warning3.classList.add("fa-circle-exclamation");
-    // warning4.classList.add("fa-circle-exclamation");
-    // warning5.classList.add("fa-circle-exclamation");
-    // warning6.classList.add("fa-circle-exclamation");
-  }
+    usernameCheck();
+    validate();
+    addressCheck();
+    passwordCheck();
+    phoneNumberCheck();
 }
 
 function usernameCheck() {
@@ -158,6 +147,7 @@ function passwordCheck(params) {
 $("#inputPassword4").on("input", passwordCheck);
 $("#inputPassword5").on("input", passwordCheck);
 
+// email validating
 const validateEmail = (email) => {
   return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
 };
