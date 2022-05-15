@@ -88,7 +88,8 @@ li {
 #warning3.fa-circle-exclamation,
 #warning4.fa-circle-exclamation,
 #warning5.fa-circle-exclamation,
-#warning6.fa-circle-exclamation {
+#warning6.fa-circle-exclamation,
+#warning7.fa-circle-exclamation {
   display: var(--fa-display, inline-block);
   color: red;
 }
@@ -98,7 +99,8 @@ li {
 #warning3.fa-circle-check,
 #warning4.fa-circle-check,
 #warning5.fa-circle-check,
-#warning6.fa-circle-check {
+#warning6.fa-circle-check,
+#warning7.fa-circle-check{
   display: var(--fa-display, inline-block);
   color: green;
 }

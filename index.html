@@ -138,10 +138,13 @@
 
             <div class="col-md-6">
               <label for="inputGender4" class="form-label">Gender</label>
-              <select class="form-select" aria-label="Default select example">
+              <i class="fa-solid" id="warning7"></i>
+              <select class="form-select" aria-label="Default select example" id="inputGender4" onclick="genderSelect(this)" >
+                <option selected>Choose...</option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
               </select>
+              <span class="error-message"><p>please select your gender</p></span>
             </div>
 
             <div class="col-md-6">
