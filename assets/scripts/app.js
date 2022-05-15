@@ -90,6 +90,8 @@ function onSubmit() {
      }
 }
 
+// checking for valid username
+
 function usernameCheck() {
   const input = userName.value;
 
@@ -108,6 +110,8 @@ function usernameCheck() {
 
 $("#inputUsername4").on("input", usernameCheck);
 
+// checking for valid address
+
 function addressCheck() {
   const input = address.value;
 
@@ -125,6 +129,8 @@ function addressCheck() {
 
 $("#inputAddress").on("input", addressCheck);
 
+// checking for valid phone number
+
 function phoneNumberCheck() {
   const input = phoneNumber.value;
 
@@ -141,6 +147,8 @@ function phoneNumberCheck() {
 }
 
 $("#inputPhoneNumber4").on("input", phoneNumberCheck);
+
+// checking for valid password
 
 function passwordCheck(params) {
   const passwordSet = passwordInputBox.value;
@@ -201,6 +209,8 @@ const validate = () => {
 };
 
 $("#inputEmail4").on("input", validate); 
+
+// checking for valid gender
 
 function genderSelect(selected) {
     // error logic
