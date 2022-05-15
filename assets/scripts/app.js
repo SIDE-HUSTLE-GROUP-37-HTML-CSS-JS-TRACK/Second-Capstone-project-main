@@ -15,6 +15,15 @@ const email = document.getElementById("inputEmail4");
 const address = document.getElementById("inputAddress");
 const phoneNumber = document.getElementById("inputPhoneNumber4");
 const submitBtn = document.getElementById("btn");
+//error messages
+const usernameError = userName.nextElementSibling;
+const emailError = email.nextElementSibling;
+const addressError = address.nextElementSibling;
+const phoneNumberError = phoneNumber.nextElementSibling;
+const pass1 = passwordInputBox.nextElementSibling;
+const pass2 = passwordInputBox2.nextElementSibling;
+const matchingPassWord1 = pass1.nextElementSibling;
+const matchingPassWord2 = pass2.nextElementSibling;
 
 //warning via user input
 const warning1 = document.getElementById("warning1");
@@ -51,9 +60,10 @@ securityEyes.addEventListener("click", passwordDisplay);
 submitBtn.addEventListener("click", onSubmit);
 
 function onSubmit() {
-    usernameCheck();
-    addressCheck();
-    phoneNumberCheck();
+  usernameCheck();
+  addressCheck();
+  passwordCheck();
+  phoneNumberCheck();
   const formInputState = "";
   warningVisible(formInputState);
 }
@@ -64,48 +74,73 @@ function warningVisible(formstate) {
   } else {
     warning2.classList.add("fa-circle-exclamation");
     // warning3.classList.add("fa-circle-exclamation");
-    warning4.classList.add("fa-circle-exclamation");
-    warning5.classList.add("fa-circle-exclamation");
+    // warning4.classList.add("fa-circle-exclamation");
+    // warning5.classList.add("fa-circle-exclamation");
     // warning6.classList.add("fa-circle-exclamation");
   }
 }
 
 function usernameCheck() {
-    const input = userName.value;
+  const input = userName.value;
 
   if (input === "") {
-    alert("enter a username");
+    usernameError.style.display = "inline-block";
     warning1.classList.add("fa-circle-exclamation");
   } else {
-    alert("username is okay");
+    usernameError.style.display = "none";
     warning1.classList.remove("fa-circle-exclamation");
     warning1.classList.add("fa-circle-check");
-      
   }
 }
 
 function addressCheck() {
-    const input = address.value;
+  const input = address.value;
 
-    if (input === "") {
-      alert("enter an address");
-      warning3.classList.add("fa-circle-exclamation");
-    } else {
-      alert("address is okay");
-      warning3.classList.remove("fa-circle-exclamation");
-      warning3.classList.add("fa-circle-check");
-    }
+  if (input === "") {
+    addressError.style.display = "inline-block";
+    warning3.classList.add("fa-circle-exclamation");
+  } else {
+    addressError.style.display = "none";
+    warning3.classList.remove("fa-circle-exclamation");
+    warning3.classList.add("fa-circle-check");
+  }
 }
 
 function phoneNumberCheck() {
-    const input = phoneNumber.value;
+  const input = phoneNumber.value;
 
-    if (input === "") {
-      alert("enter a phone no");
-      warning6.classList.add("fa-circle-exclamation");
-    } else {
-      alert("phone no is okay");
-      warning6.classList.remove("fa-circle-exclamation");
-      warning6.classList.add("fa-circle-check");
-    }
+  if (input === "") {
+    phoneNumberError.style.display = "inline-block";
+    warning6.classList.add("fa-circle-exclamation");
+  } else {
+    phoneNumberError.style.display = "none";
+    warning6.classList.remove("fa-circle-exclamation");
+    warning6.classList.add("fa-circle-check");
+  }
+}
+
+function passwordCheck(params) {
+  const passwordSet = passwordInputBox.value;
+  const passwordconfirm = passwordInputBox2.value;
+
+  if (passwordSet != passwordconfirm) {
+    matchingPassWord1.style.display = "inline-block";
+    matchingPassWord2.style.display = "inline-block";
+    warning4.classList.add("fa-circle-exclamation");
+    warning5.classList.add("fa-circle-exclamation");
+  } else if (passwordSet === "" || passwordconfirm === "") {
+    pass1.style.display = "inline-block";
+    pass2.style.display = "inline-block";
+    warning4.classList.add("fa-circle-exclamation");
+    warning5.classList.add("fa-circle-exclamation");
+  } else {
+    pass1.style.display = "none";
+    pass2.style.display = "none";
+    matchingPassWord1.style.display = "none";
+    matchingPassWord2.style.display = "none";
+    warning4.classList.remove("fa-circle-exclamation");
+    warning5.classList.remove("fa-circle-exclamation");
+    warning4.classList.add("fa-circle-check");
+    warning5.classList.add("fa-circle-check");
+  }
 }

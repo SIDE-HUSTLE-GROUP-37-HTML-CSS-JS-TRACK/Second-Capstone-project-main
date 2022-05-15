@@ -102,7 +102,15 @@ li {
   display: var(--fa-display, inline-block);
   color: green;
 }
-
+.error-message{
+  color: red;
+  display: none;
+  text-align: center;
+}
+.password-match{
+  color: red;
+  display: none;
+}
 #id {
   background-color: blueviolet;
   padding: 1rem 2rem;
