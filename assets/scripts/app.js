@@ -72,7 +72,7 @@ function warningVisible(formstate) {
   if (formstate === "success") {
     alert("thank you for your time");
   } else {
-    warning2.classList.add("fa-circle-exclamation");
+    // warning2.classList.add("fa-circle-exclamation");
     // warning3.classList.add("fa-circle-exclamation");
     // warning4.classList.add("fa-circle-exclamation");
     // warning5.classList.add("fa-circle-exclamation");
@@ -93,6 +93,8 @@ function usernameCheck() {
   }
 }
 
+$("#inputUsername4").on("input", usernameCheck);
+
 function addressCheck() {
   const input = address.value;
 
@@ -105,6 +107,8 @@ function addressCheck() {
     warning3.classList.add("fa-circle-check");
   }
 }
+
+$("#inputAddress").on("input", addressCheck);
 
 function phoneNumberCheck() {
   const input = phoneNumber.value;
@@ -119,6 +123,8 @@ function phoneNumberCheck() {
   }
 }
 
+$("#inputPhoneNumber4").on("input", phoneNumberCheck);
+
 function passwordCheck(params) {
   const passwordSet = passwordInputBox.value;
   const passwordconfirm = passwordInputBox2.value;
@@ -126,11 +132,15 @@ function passwordCheck(params) {
   if (passwordSet != passwordconfirm) {
     matchingPassWord1.style.display = "inline-block";
     matchingPassWord2.style.display = "inline-block";
+    pass1.style.display = "none";
+    pass2.style.display = "none";
     warning4.classList.add("fa-circle-exclamation");
     warning5.classList.add("fa-circle-exclamation");
   } else if (passwordSet === "" || passwordconfirm === "") {
     pass1.style.display = "inline-block";
     pass2.style.display = "inline-block";
+    matchingPassWord1.style.display = "none";
+    matchingPassWord2.style.display = "none";
     warning4.classList.add("fa-circle-exclamation");
     warning5.classList.add("fa-circle-exclamation");
   } else {
@@ -144,3 +154,26 @@ function passwordCheck(params) {
     warning5.classList.add("fa-circle-check");
   }
 }
+
+$("#inputPassword4").on("input", passwordCheck);
+$("#inputPassword5").on("input", passwordCheck);
+
+const validateEmail = (email) => {
+  return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
+
+const validate = () => {
+  const email = $("#inputEmail4").val();
+
+  if (validateEmail(email)) {
+    warning2.classList.add("fa-circle-check");
+      warning2.classList.remove("fa-circle-exclamation");
+       emailError.style.display = "none";
+  } else {
+      warning2.classList.add("fa-circle-exclamation");
+      emailError.style.display = 'inline-block';
+  }
+  return false;
+};
+
+$("#inputEmail4").on("input", validate);
