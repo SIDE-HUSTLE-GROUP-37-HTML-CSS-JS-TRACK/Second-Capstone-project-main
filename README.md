@@ -3,7 +3,7 @@ SIDE HUSTLE INTERNSHIP CAPSTONE PROJECT 2
 
 <div align="center">
   <a href="https://github.com/SIDE-HUSTLE-GROUP-37-HTML-CSS-JS-TRACK/Second-Capstone-project-main">
-    <img src="images/logo green.jpg" alt="Logo" width="80" height="80">
+    <img src="assets/images/logo-dark.114b4a7b.png" alt="Logo" width="80" height="80">
   </a>
 
   <p align="center">
